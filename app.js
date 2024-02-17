@@ -49,21 +49,19 @@ app.post('/email', async (req, res) => {
     });
     // Construct the email
     const mailOptions = {
-    from: 'Learn2Earn',
-    to: email,
-    subject: 'Your Free PDF Awaits!',
-    text: 'Click here to download your free PDF!',
-    html: '<p><a href="https://cdn.shopify.com/s/files/1/0024/9551/2691/files/2022_07_24.pdf?v=1679598431">Click here</a> to download your free PDF!</p>'
+        from: 'Learn2Earn',
+        to: email,
+        subject: 'Your Free PDF Awaits!',
+        text: 'Click here to download your free PDF!',
+        html: '<p><a href="https://cdn.shopify.com/s/files/1/0024/9551/2691/files/2022_07_24.pdf?v=1679598431">Click here</a> to download your free PDF!</p>'
     };
     // Send the email
     transporter.sendMail(mailOptions, function(error, info){
-    if (error) {
-        console.error('Error:', error);
-        res.status(500).json({ error: 'Failed to send email' });
-    } else {
-        console.log('Email sent: ' + info.response);
-        res.json({ message: 'Email sent' });
-    }
+        if (error) {
+            console.error('Error:', error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
     });
 
     // Adding the email to Google Sheets //
