@@ -18,8 +18,8 @@
     const port = 2000;
     
     // Middleware to parse JSON bodies
-    app.use(express.json());
     app.use(cors());
+    app.use(express.json());
     
     // Route for handling POST requests
     app.post('/email', async (req, res) => {
