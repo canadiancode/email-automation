@@ -19,7 +19,13 @@ const port = 2000;
 
 // Middleware to enable CORS
 app.use(cors());
-app.options('*', cors()); // Enable preflight requests for all routes
+app.options('*', cors());
+
+// Middleware to set Access-Control-Allow-Origin header
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
 
 // Middleware to parse JSON bodies
 app.use(express.json());
