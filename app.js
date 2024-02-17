@@ -17,18 +17,18 @@ const nodemailer = require('nodemailer');
 const app = express();
 const port = 2000;
 
-// Middleware to enable CORS
-app.use(cors());
-app.options('*', cors());
-
-// Middleware to set Access-Control-Allow-Origin header
+// Middleware to set Access-Control-Allow-Origin header and handle CORS
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
-    next();
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    if (req.method === 'OPTIONS') {
+        res.sendStatus(200);
+    } else {
+        next();
+    }
 });
-
-// Middleware to parse JSON bodies
-app.use(express.json());
+app.use(express.json()); // Middleware to parse JSON bodies
 
 // Route for handling POST requests
 app.post('/email', async (req, res) => {
