@@ -79,7 +79,6 @@ app.post('/email', async (req, res) => {
         console.error('Error:', error);
         res.json(error)
     });
-
 });
 
 // Start the server
