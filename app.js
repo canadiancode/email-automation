@@ -15,7 +15,7 @@ const nodemailer = require('nodemailer');
 
 // Start Express app
 const app = express();
-const port = 2000;
+const port = process.env.PORT || 2000;
 
 // Middleware to set Access-Control-Allow-Origin header and handle CORS
 app.use((req, res, next) => {
