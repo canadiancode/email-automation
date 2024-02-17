@@ -53,18 +53,7 @@ app.post('/email', async (req, res) => {
         to: email,
         subject: 'Alpha',
         text: 
-        `
-Hi there,
-
-Please see the materials you requested. Gentle reminder: this communication does not constitute a fiduciary relationship.
-
-Conversely, this an educational document which reflects upon what I have learnt in my eight years of cryptocurrency experience.
-
-Distribute the email registration as you please.
-
-Forever thankful,
-
-Learn2Earn
+        `Hi there, Please see the materials you requested. Gentle reminder: this communication does not constitute a fiduciary relationship. Conversely, this an educational document which reflects upon what I have learnt in my eight years of cryptocurrency experience. Distribute the email registration as you please. Forever thankful, Learn2Earn
         `,
         html: 
         `
@@ -111,25 +100,3 @@ Learn2Earn
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-
-
-
-
-
-// html: '<p><a href="https://cdn.shopify.com/s/files/1/0024/9551/2691/files/2022_07_24.pdf?v=1679598431">Please see the requested guide.</a> Gentle reminder: this communication does not constitute a fiduciary relationship.</p>'
-
-
-
-`
-<p>Hi there,
-<br>
-<p>Please see <a href="https://docs.google.com/document/d/1IMaF8xFNu881S_BJRVjZ_-BWf2d8we5y3qjIxDRiOmk/edit?usp=sharing">the materials you requested</a>. Gentle reminder: this communication does not constitute a fiduciary relationship.
-<br>
-<p>Conversely, this an educational document which reflects upon what I have learnt in my eight years of cryptocurrency experience.
-<br>
-<p>Distribute the email registration as you please.
-<br>
-<p>Forever thankful,
-<br>
-<p>Learn2Earn
-`,
