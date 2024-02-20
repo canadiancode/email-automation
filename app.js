@@ -59,7 +59,7 @@ app.post('/email', async (req, res) => {
         `
         <p>Hi there,
         <br>
-        <p>Please see <a href="https://docs.google.com/document/d/1IMaF8xFNu881S_BJRVjZ_-BWf2d8we5y3qjIxDRiOmk/edit?usp=sharing">the materials you requested</a>. Gentle reminder: this communication does not constitute a fiduciary relationship.
+        <p>Please see <a href="https://docs.google.com/document/d/1IMaF8xFNu881S_BJRVjZ_-BWf2d8we5y3qjIxDRiOmk/edit">the materials you requested</a>. Gentle reminder: this communication does not constitute a fiduciary relationship.
         <br>
         <p>Conversely, this an educational document which reflects upon what I have learnt in my eight years of cryptocurrency experience.
         <br>
